@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 15px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    --color-text: #000;
+    --color-bg-view-1: white;
+    --color-bg-view-2: #6a6468;
+    --color-link: #000;
+    --color-link-hover: #000;
+    --color-button: #000;
+    --color-button-hover: #22267d;
+    color: var(--color-text);
+    background-color: var(--color-bg-view-1);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+}
+
+.home {
+  position: relative;
+  background-color: #111111;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Added styles for centering */
+.home .container-fluid {
+  height: 100%;
+}
+
+.home .row {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;text-decoration: none;
+
+  padding: 10px 20px; /* Increase padding to make buttons bigger */
+  border: 2px solid #000; /* Add border to create square buttons */
+  border-radius: 0; /* Remove border radius to make buttons square */
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out, transform 0.3s; /* Increase transition duration and use ease-in-out for smoother transition */
+}
+
+
+
+
+
+/* Hover effect */
+.btn-white:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateX(5px); /* Slide the button to the right on hover */
+}
+
+.mouse-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999; /* Ensure the trail is above other elements */
+}
+
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+.star:before {
+  position: absolute;
+  content: '\2726';
+  inset: 0;
+}
+
+.mainTxt{
+  font-size: 80px;
+}
