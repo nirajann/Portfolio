@@ -1,53 +1,142 @@
-.about-section {
-    background-color: #0d1117;
-    color: #c9d1d9;
-    padding: 5rem 0;
+.aboutme {
+  background-color: #1b1b1b;
+  height: 40vh;
+  display: flex;
+}
+.aboutme .title {
+  max-width: 60%;
+  width: 100%;
+  align-self: center;
+  transform: translateY(-50px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.aboutme .title span {
+  display: inline-block;
+  font-size: 5vw;
+  color: #efefef;
+  width: 100%;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  animation: byBottom 1s ease both;
+  font-weight: 600;
+  letter-spacing: 0.25vw;
+}
+.aboutme .title span:last-child {
+  font-size: 1rem;
+  animation: byBottom 1s 0.25s ease both;
+}
+.aboutme .title span a {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #f7ca18;
+}
+.aboutme .title span a::after {
+  content: "";
+  height: 2px;
+  background-color: #f7ca18;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  animation: linkAfter 0.5s 1s ease both;
+}
+@-moz-keyframes pop {
+  0% {
+    transform: translateY(100%);
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  100% {
+    transform: translateY(0);
   }
-  
-  .row {
-    display: flex;
-    align-items: center;
+}
+@-webkit-keyframes pop {
+  0% {
+    transform: translateY(100%);
   }
-  
-  .about-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  100% {
+    transform: translateY(0);
   }
-  
-  .text-white {
-    color: #ffffff;
+}
+@-o-keyframes pop {
+  0% {
+    transform: translateY(100%);
   }
-  
-  .tag {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #dc3545;
-    color: #fff;
-    border-radius: 25px;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-
+  100% {
+    transform: translateY(0);
   }
-  
-  .about-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+}
+@keyframes pop {
+  0% {
+    transform: translateY(100%);
   }
-  
-  .about-description {
-    font-size: 1.125rem;
-    line-height: 1.75;
-    margin-bottom: 1.5rem;
+  100% {
+    transform: translateY(0);
   }
-  
- 
-  
+}
+@-moz-keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+@-webkit-keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+@-o-keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+@keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}

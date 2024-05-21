@@ -1,12 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
-/* ///peel me // */
-
-
-
-
-
 /* Dark mode styles */
 .dark-mode .background {
   background-color: #fff; /* Dark mode background color */
@@ -29,161 +23,6 @@
 .dark-mode .services{
   background-color: black;
 }
-
-* Services */
-
-.services h6 {
-  margin-bottom: 10px;
-}
-
-.services h2 {
-  margin-bottom: 10px;
-}
-
-.services .description {
-  margin-bottom: 60px;
-  width: 1000px;
-  line-height: 30px;
-}
-
-.services .grid {
-  display: grid;
-  grid-template-columns: 500px 500px;
-  grid-column-gap: 120px;
-  grid-template-rows: 150px 150px;
-  grid-row-gap: 30px;
-}
-
-.services .grid .card {
-  width: 420px;
-  padding: 43px 40px;
-  background: linear-gradient(to bottom right, #313131, #0F0F0F);
-  border-radius: 5px;
-  display: block;
-  height: 170px;
-}
-
-.services .grid .card h3 {
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.services .grid .card p {
-  color: #C3C3C3;
-  font-size: 22px;
-  font-weight: normal;
-}
-
-.square.blue { 
-  position: absolute;
-  box-shadow: 3px 3px 15px rgba(61, 178, 213, 0.4);
-  background: linear-gradient(#4F3DD5, #3DB2D5);
-  top: 100px;
-  right: 75px;
-  width: 125px;
-  height: 125px;
-  opacity: 0.01;
-  transition: all 0.05s ease;
-  transform: translateX(125px);
-}
-
- .square.blue.in-view {
-  transform: rotate(22.5deg) translateX(0px);
-  opacity: 1;
-  transition: all 1s ease;
-}
-
-/* Responsive */
-
-@media (max-width: 1280px) {
-  
-  .services .grid {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-column-gap: 50px;
-    grid-template-rows: 150px 150px;
-    grid-row-gap: 30px;
-  }
-}
-
-@media (max-width: 1200px) {
-  
-  .services .sectionWrapper {
-    padding-top: 185px;
-    padding-bottom: 185px;
-  }
-  
-  .services .grid {
-    display: grid;
-    grid-template-columns: 480px;
-    grid-template-rows: 150px 150px;
-    grid-row-gap: 30px;
-  }
-  
-  .services .grid .card {
-    width: 420px;
-    padding: 43px 40px;
-    background: linear-gradient(to bottom right, #313131, #0F0F0F);
-    border-radius: 5px;
-  }
-}
-
-@media (max-width: 850px) {
-  
-  .services .sectionWrapper {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
-  
-  h6 {
-    font-size: 20px;
-  }
-  
-  h2 {
-    font-size: 35px;
-  }
-  
-  .services .description {
-    font-size: 18px;
-    width: initial;
-  }
-  
-  .services .square.blue {
-    width: 75px;
-    height: 75px;
-  }
-   
-   .services .grid {
-    display: grid;
-    grid-template-columns: 85%;
-    grid-template-rows: initial;
-    grid-row-gap: 25px;
-  }
-  
-  .services .grid .card {
-    width: 100%;
-    padding: 31.5px 30px;
-    background: linear-gradient(to bottom right, #313131, #0F0F0F);
-    border-radius: 5px;
-    height: 80%;
-  } 
-
-  .services .grid .card h3 {
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-
-  }
-
-  .services .grid .card p {
-    color: #C3C3C3;
-    font-size: 20px;
-    font-weight: normal;
-  }
-}
-
 
 /* Added styles for centering */
 .home .container-fluid {
@@ -246,41 +85,73 @@
 }
 
 
+
+
+
+.typing-text{
+  color: white;
+}
+.typing-text::after {
+  content: "|";
+  animation: blink ease 1s infinite;
+  
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  }
+}
+
+
+
+/* Hover effect */
+.btn-white:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateX(5px); /* Slide the button to the right on hover */
+}
+
+.mouse-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999; /* Ensure the trail is above other elements */
+}
+
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+.star:before {
+  position: absolute;
+  content: '\2726';
+  inset: 0;
+}
+
+.mainTxt{
+  font-size: 80px;
+}
+
+
 @media only screen and (max-width: 900px) {
+.secret{
+  opacity: 0;
+}
+    }
 
-  .section{
-    top :5%;
+
+  .secret{
+    display: flex;
+  justify-content: end;
+  text-decoration: none;
+  color: black;
   }
-
-  .sectionwrapper h6{
-    font-size: 20px;
-
-  }
-   
-  .description {
-     padding-top:1%;
-     font-size: 25px;
-     padding: 0px;
-    }
-
-    .services .grid{
-      display: grid;
-      grid-template-columns: 85%;
-      grid-template-rows: initial;
-      grid-row-gap: 10px;
-    }
-
-    .card{
-      width: 50%;
-      height: 80%;
-      padding: 10px 10px;
-    }
-
-    .services .grid .card h3{
-      font-size: 15px;
-    }
-
-    .services .grid .card p{
-      font-size: 10px;
-    }
-    }

@@ -25,8 +25,8 @@
 
 .contact-left h1{
     border-radius: 5%;
-    color: #dc3545; /* Text color red */
-    border: 2px solid #dc3545; /* Border color red */
+    color: #dbb418; /* Text color red */
+    border: 2px solid #dbb418; /* Border color red */
     width: 70%;
     font-family: "Bowlby One SC", sans-serif;
     font-weight: 300;
@@ -73,7 +73,7 @@
     width: 140px;
     height: 50px;
     border-radius: 10%;
-    background: #80ece9;
+    background: #dbb418;
     z-index: 100;
     cursor: pointer;
     transition: 0.4s ease;
