@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import "../../style/GetinTouch.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faYoutube, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import gsap from "gsap";
+import emailjs from 'emailjs-com';
 import CV from "../../assets/Docx/CV.docx";
 
+
+
 const GetInTouch = () => {
+  const [Email, setEmail] = useState('');
   useEffect(() => {
     const hero = document.querySelector('[data-hero]');
-
-    window.addEventListener('mousemove', (e) => {
+    const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
       const x = Math.round((clientX / window.innerWidth) * 100);
       const y = Math.round((clientY / window.innerHeight) * 100);
@@ -20,7 +23,55 @@ const GetInTouch = () => {
         duration: 0.3,
         ease: 'sine.out',
       });
-    });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    const countDownToBirthday = () => {
+      const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+      let today = new Date(),
+        dd = String(today.getDate()).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        yyyy = today.getFullYear(),
+        nextYear = yyyy + 1,
+        dayMonth = "05/05/",
+        birthday = dayMonth + yyyy;
+
+      today = mm + "/" + dd + "/" + yyyy;
+      if (today > birthday) {
+        birthday = dayMonth + nextYear;
+      }
+
+      const countDown = new Date(birthday).getTime();
+      const x = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / day);
+        document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
+        document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
+        document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
+
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my birthday!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+      }, 1000);
+    };
+
+    countDownToBirthday();
   }, []);
 
   const handleDownloadCV = () => {
@@ -32,59 +83,40 @@ const GetInTouch = () => {
     document.body.removeChild(link);
   };
 
-  useEffect(() => {
-    const countDownToBirthday = () => {
-      const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-      let today = new Date(),
-          dd = String(today.getDate()).padStart(2, "0"),
-          mm = String(today.getMonth() + 1).padStart(2, "0"),
-          yyyy = today.getFullYear(),
-          nextYear = yyyy + 1,
-          dayMonth = "05/05/",
-          birthday = dayMonth + yyyy;
+    const templateParams = {
+      from_email: Email,
 
-      today = mm + "/" + dd + "/" + yyyy;
-      if (today > birthday) {
-        birthday = dayMonth + nextYear;
-      }
-
-      const countDown = new Date(birthday).getTime();
-      const x = setInterval(function() {    
-        const now = new Date().getTime();
-        const distance = countDown - now;
-
-        document.getElementById("days").innerText = Math.floor(distance / (day));
-        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour));
-        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute));
-        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-      }, 0);
     };
+    emailjs.send(
+      'service_d5t73ko', 'template_4ikfptm',  // Replace with your EmailJS template ID
+      templateParams,
+      'vd2KgeAFyaaYEtnq_' // Replace with your EmailJS user ID
+    )
+    .then((response) => {
+      console.log('Email sent successfully!', response.status, response.text);
+      alert('Email sent successfully!');
+    })
+    .catch((err) => {
+      console.error('Failed to send email:', err);
+    });
 
-    countDownToBirthday();
-  }, []);
+    e.target.reset();
+  };
 
   return (
     <>
-      <div class="wrapper">
-        <div class="hero">
-          <p class="hero__heading" onClick={handleDownloadCV}>Download CV</p>
+      <div className="wrapper">
+        <div className="hero">
+          <p className="hero__heading" onClick={handleDownloadCV}>Download CV</p>
         </div>
-        <div class="hero hero--secondary" aria-hidden="true" data-hero>
-          <div class="Apostion">
+        <div className="hero hero--secondary" aria-hidden="true" data-hero>
+          <div className="Apostion">
             <a
               href="#"
-              class="header__btn"
+              className="header__btn"
               target="_blank"
               title="Check On Github"
               onClick={handleDownloadCV}
@@ -112,7 +144,14 @@ const GetInTouch = () => {
 
       {/* Footer Area */}
       <footer className="footer">
-        <div class="Bdaycontainer">
+      
+        <div className="SendCV">
+          <form onSubmit={sendEmail}>
+            <input id="input-email" className="mail-input"  value={Email} placeholder="Type Your Email." type="email" name="user_email" onChange={(e) => setEmail(e.target.value)} />
+            <button type="submit" className="btn-mail-receive">Shoot</button>
+          </form>
+        </div>
+        <div className="Bdaycontainer">
           <h1 id="headline">Countdown to my birthday</h1>
           <div id="countdown">
             <ul>
@@ -122,7 +161,7 @@ const GetInTouch = () => {
               <li className="birthdayli"><span id="seconds"></span>Seconds</li>
             </ul>
           </div>
-          <div id="content" class="emoji">
+          <div id="content" className="emoji">
             <span>🥳</span>
             <span>🎉</span>
             <span>🎂</span>

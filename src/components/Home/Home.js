@@ -103,6 +103,27 @@ const Home = () => {
   }, [])
   return (
     <>
+    <div id="Awesome" class="anim750">
+	
+  <div class="reveal circle_wrapper">
+		<div class="circle">Hello!</div>
+	</div>
+						
+	<div class="sticky anim750">
+		<div class="front circle_wrapper anim750">
+			<div class="circle anim750"></div>
+	  </div>
+	</div>
+	
+  <h4>Peel Me!</h4>
+						
+  <div class="sticky anim750">
+		<div class="back circle_wrapper anim750">
+			<div class="circle anim750"></div>
+		</div>
+	</div>
+						
+</div>
      <form id="toogleform">
             <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
             <div className="curtain"></div>
