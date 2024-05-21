@@ -2,7 +2,6 @@ import React, { useState,useEffect ,useRef} from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import { Link, useLocation } from 'react-router-dom';
 import Kinet from 'kinet';
-import inView from 'in-view';
 import '../../style/Header.css';
 
 const Header = () => {
@@ -37,49 +36,46 @@ const Header = () => {
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     // create instance of kinet with custom settings
-var kinet = new Kinet({
-  acceleration: 0.02,
-  friction: 0.25,
-  names: ["x", "y"],
-});
+    var kinet = new Kinet({
+        acceleration: 0.02,
+        friction: 0.25,
+        names: ["x", "y"],
+    });
 
-// select circle element
-var circle = document.getElementById('circle');
+    // select circle element
+    var circle = document.getElementById('circle');
 
-// set handler on kinet tick event
-kinet.on('tick', function(instances) {
-  circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
-});
+    // check if circle element exists
+    if (circle) {
+        // set handler on kinet tick event
+        kinet.on('tick', function (instances) {
+            circle.style.transform = `translate3d(${instances.x.current}px, ${instances.y.current}px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${instances.y.velocity / 2}deg)`;
+        });
+    }
 
-// call kinet animate method on mousemove
-document.addEventListener('mousemove', function (event) {
-  kinet.animate('x', event.clientX - window.innerWidth/2);
-  kinet.animate('y', event.clientY - window.innerHeight/2);
-});
+    // call kinet animate method on mousemove
+    document.addEventListener('mousemove', function (event) {
+        kinet.animate('x', event.clientX - window.innerWidth / 2);
+        kinet.animate('y', event.clientY - window.innerHeight / 2);
+    });
 
+    // log
+    kinet.on('start', function () {
+        console.log('start');
+    });
 
-
-
-
-
-
-// log
-kinet.on('start', function() {
-  console.log('start');
-});
-
-kinet.on('end', function() {
-  console.log('end');
-});
-  })
+    kinet.on('end', function () {
+        console.log('end');
+    });
+}, []);
 
 
   return (
     <div className='BG'>
     <div className={isDarkMode ? "dark-mode" : ""}>
-      <div className="background">
+   
         <nav id="nav">
           <div className="navWrapper">
             <a href="#" id="logo">NirajanGautam</a>
@@ -100,42 +96,12 @@ kinet.on('end', function() {
               </div>
             </div>
           </div>
-          <form id="toogleform">
+          {/* <form id="toogleform">
             <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
             <div className="curtain"></div>
-          </form>
+          </form> */}
         </nav>
-        <div className="header">
-          <div className="headerWrapper">
-            <h6>we do</h6>
-            <h1>Web Design <br /> & Development</h1>
-            <a class="button-wrapper">
-  <span class="dot dot-1"></span>
-  <span class="dot dot-2"></span>
-  <span class="dot dot-3"></span>
-  <span class="dot dot-4"></span>
-  <span class="dot dot-5"></span>
-  <span class="dot dot-6"></span>
-  <span class="dot dot-7"></span>
-  <span class="button bg-yellow-500 px-16 py-4 rounded-full uppercase">GET IN TOUCH</span>
-</a>
-    
-    <div id="circle" class="circle bg-yellow-500"></div>
-         
-            <div className="circle blue"></div>
-            <div className="square red"></div>
-            <div className="triangle green">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 177.893 177.893">
-                {/* Your SVG code */}
-              </svg>
-             
-            </div>
-            <div className="circle orange"></div>
-          </div>
-        </div>
-      </div>
-      
-   
+ 
     </div>
     </div>
   );

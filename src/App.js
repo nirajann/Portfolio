@@ -8,7 +8,7 @@ import About from "./components/Home/About";
 import Work from "./components/Home/Work"
 import Contact from "./components/Home/Contact";
 import CodingGame from "./components/Home/Game"
-import Note from "./components/Home/Stickynote"
+import GetinTouch from "./components/Home/GetinTouch"
 
 
 
@@ -22,7 +22,7 @@ function App() {
         <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/CodingGame" element={<CodingGame />} />
-        <Route path="/Note" element={<Note />} />
+        <Route path="/GetinTouch" element={<GetinTouch />} />
       </Routes>
     </Router>
   );

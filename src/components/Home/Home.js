@@ -1,4 +1,4 @@
-import {React, useEffect }from 'react';
+import {React, useEffect, useState }from 'react';
 import Contact from './Contact';
 import About from './About';
 import '../../style/home.css';
@@ -9,6 +9,16 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Home = () => {
   const location = useLocation();
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleOverlay = () => {
+    setIsOverlayOpen(!isOverlayOpen);
+  };
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   const handleNavClick = (section) => {
     if (location.pathname !== '/') {
@@ -93,7 +103,49 @@ const Home = () => {
   }, [])
   return (
     <>
+     <form id="toogleform">
+            <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
+            <div className="curtain"></div>
+          </form>
+  <div className='BG'>
+    <div className={isDarkMode ? "dark-mode" : ""}>
+      <div className="background">
+       
+        <div className="header">
+          <div className="headerWrapper">
+            <h6>we do</h6>
+            <h1>Web Design <br /> & Development</h1>
+            <a class="button-wrapper" href="/GetinTouch">
+  <span class="dot dot-1"></span>
+  <span class="dot dot-2"></span>
+  <span class="dot dot-3"></span>
+  <span class="dot dot-4"></span>
+  <span class="dot dot-5"></span>
+  <span class="dot dot-6"></span>
+  <span class="dot dot-7"></span>
+  <span class="button bg-yellow-500 px-16 py-4 rounded-full uppercase">GET IN TOUCH</span>
+</a>
+    
+    <div id="circle" class="circle bg-yellow-500"></div>
+         
+            <div className="circle blue"></div>
+            <div className="square red"></div>
+            <div className="triangle green">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 177.893 177.893">
+                {/* Your SVG code */}
+              </svg>
+             
+            </div>
+            <div className="circle orange"></div>
+          </div>
+        </div>
 
+        
+      </div>
+      
+   
+    </div>
+    </div>
          <div id="mouse-trail" className="mouse-trail"></div>
          <div className="section services">
         <div className="sectionWrapper">

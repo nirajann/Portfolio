@@ -1,31 +1,35 @@
 import React, { useState } from 'react';
 import '../../style/Work.css';
 import Popup from '../Home/popup';
+import Passportpal from '../../assets/Image/Passportpal.jpg';
 
 const projects = [
   {
     id: 1,
     category: 'Website',
-    title: 'Little Ashé',
-    date: 'July 2023',
-    description: 'Website, Shopify',
+    title: 'UrbanSage',
+    date: 'Oct 2023',
+    description: 'React Webiste created using Html, Css, Javascript and Mongodb',
     imgSrc: 'https://th.bing.com/th/id/OIP.gksOxdTXUt7DWe7Nmc0tHgHaE7?rs=1&pid=ImgDetMain',
+    github: "Portfolio Project/portfolio/src/components/Home/popup.js"
   },
   {
     id: 2,
     category: 'App',
-    title: 'Another Project',
-    date: 'June 2023',
-    description: 'App Development',
-    imgSrc: 'https://th.bing.com/th/id/R.3180704aa922956d6229cfb878b09efd?rik=aGZTZNUgP0hzvQ&pid=ImgRaw&r=0',
+    title: 'Passport Pal',
+    date: 'July 2023',
+    description: '‍Flutter Project Created using firebase as Backend.',
+    imgSrc: Passportpal,
+    github: "https://github.com/nirajann/PassportPal.git"
   },
   {
     id: 3,
-    category: 'Shopify',
-    title: 'Shopify Project',
-    date: 'August 2023',
-    description: 'Graphic',
-    imgSrc: 'https://th.bing.com/th/id/OIP.-Z1urk3qQh67W32egtTorAHaEu?rs=1&pid=ImgDetMain',
+    category: 'Website',
+    title: 'EasyBuy',
+    date: 'August 2022',
+    description: 'website Created Using python Django Framework',
+    imgSrc: 'https://th.bing.com/th/id/OIP.jOnthmKSrbY567ye4h0LVAAAAA?rs=1&pid=ImgDetMain',
+    github: "https://github.com/nirajann/easybuyshop.git"
   },
   // Add more projects as needed
 ];

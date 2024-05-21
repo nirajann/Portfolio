@@ -464,3 +464,259 @@ css
       </section>
 
 
+
+
+      /////////////////////////chatbot
+
+
+        useEffect(() => {
+    let qNumb = 0;
+    const output = document.getElementById('unique-output');
+    let question = '<h1>Hello, My name is Nirajan. What is your name?</h1>';
+    output.innerHTML = question;
+
+    const chatBot = () => {
+      const input = document.getElementById('unique-input').value;
+
+      switch (qNumb) {
+        case 0:
+          output.innerHTML = `<h1>Awesome! Great to meet you, ${input}.</h1>`;
+          question = '<h1>Where are you from?</h1>';
+          break;
+        case 1:
+          output.innerHTML = '<h1>Cool. I am in Kathmandu.</h1>';
+          question = '<h1>What do you like to do for fun there?</h1>';
+          break;
+        case 2:
+          output.innerHTML = '<h1>Sounds like fun! I like to go to the Zoo here in Lalitpur.</h1>';
+          question = '<h1>What kind of animal is your favorite?</h1>';
+          break;
+        case 3:
+          output.innerHTML = `<h1>I like ${input} too.</h1>`;
+          question = '<h1>What else is fun in your city?</h1>';
+          break;
+        case 4:
+          output.innerHTML = '<h1>Sweet! That is great.</h1>';
+          question = '<h1>What kind of work do you do?</h1>';
+          break;
+        case 5:
+          output.innerHTML = '<h1>That sounds interesting. I do web design.</h1>';
+          question = '<h1>Do you like your work?</h1>';
+          break;
+        case 6:
+          output.innerHTML = input.toLowerCase() === "yes"
+            ? '<h1>Awesome!</h1>'
+            : '<h1>Bummer! Sorry to hear that.</h1>';
+          question = '<h1>Well, I have to go. Have a great day. Hope to talk again!</h1>';
+          break;
+        default:
+          break;
+      }
+
+      document.getElementById('unique-input').value = "";
+      setTimeout(() => output.innerHTML = question, 3000);
+      qNumb++;
+    };
+
+    const pressKey = (event) => {
+      if (event.which === 13) {
+        chatBot();
+      }
+    };
+
+    document.getElementById('unique-input').addEventListener('keypress', pressKey);
+
+    return () => {
+      document.getElementById('unique-input').removeEventListener('keypress', pressKey);
+    };
+  }, []);
+
+
+    <section className="unique-chatbot">
+        <div className="unique-container">
+          <img src="https://th.bing.com/th/id/OIP.K2zUmpCpSE0eLQJ2j5fvrQHaEK?rs=1&pid=ImgDetMain" alt="Chatbot" />
+          <div id="unique-output"></div>
+        </div>
+        <div className="unique-container">
+          <input type="text" id="unique-input" placeholder="Let's get to know each other..." />
+        </div>
+      </section>
+
+
+      .unique-chatbot {
+  padding-top: 20%;
+}
+
+.unique-container h1 {
+  font-size: 28px;
+  color: black;
+}
+
+.unique-container {
+  display: flex;
+  width: 500px;
+  border: #00796b;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.unique-container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: solid;
+}
+
+#unique-output {
+  background-color: white;
+  padding: 15px;
+  border-radius: 100px;
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+}
+
+#unique-output:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 40px solid white;
+  position: absolute;
+  bottom: -25px;
+  left: 35%;
+  transform: rotate(-25deg);
+}
+
+.unique-avatar img {
+  width: 60px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.unique-download-resume-btn {
+  background-color: #009688;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.unique-download-resume-btn:hover {
+  background-color: #00796b;
+}
+
+
+
+
+      .unique-footer {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 100%;
+  padding-top: 1%;
+  transform: translateY(-100%);
+  font-size: 25px;
+  font-weight: bold;
+  background: #0652dd;
+  color: #ecf0f1;
+}
+
+.unique-header {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 20%;
+  vertical-align: center;
+  text-align: center;
+  padding-top: 1%;
+  font-size: 25px;
+  font-weight: bold;
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+
+.unique-span {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 900px) {
+  .unique-container {
+    width: 600px;
+    border: #00796b;
+  }
+
+  .unique-chatbot {
+    padding-top: 20%;
+  }
+
+  #unique-output {
+    background-color: white;
+    padding: 15px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    width: 60%;
+    position: relative;
+  }
+
+  .unique-container h1 {
+    font-size: 20px;
+    color: black;
+  }
+
+  .unique-avatar img {
+    display: flex;
+    width: 40px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .unique-container {
+    width: 350px;
+    border: #00796b;
+  }
+
+  #unique-output {
+    background-color: white;
+    padding: 15px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    width: 60%;
+    position: relative;
+  }
+
+  .unique-chatbot {
+    padding-top: 60%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .unique-container h1 {
+    font-size: 10px;
+    color: black;
+  }
+
+  .unique-avatar img {
+    display: flex;
+    width: 50px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
