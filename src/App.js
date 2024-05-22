@@ -10,6 +10,7 @@ import Work from "./components/Home/Work"
 import Contact from "./components/Home/Contact";
 import GetinTouch from "./components/Home/GetinTouch"
 import Secret from  "./components/Home/Secret"
+import Notfound from  "./components/Home/Notfound"
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/GetinTouch" element={<GetinTouch />} />
         <Route path="/Thisisnottheoneyouwannalookat" element={<Secret />} />
+        <Route path="/Notfound" element={<Notfound />} />
       </Routes>
     </Router>
   );

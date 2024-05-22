@@ -301,6 +301,8 @@ nav {
   visibility: visible;
 }
 
+
+
 .overlay a {
   color: white;
   font-size: 54px;
@@ -312,6 +314,7 @@ nav {
   opacity: 10;
   transition: transform 0.2s ease;
   overflow: hidden;
+
 }
 
 .overlay p {
@@ -420,6 +423,7 @@ nav {
 #services {
   width: 201px;
   color: white;
+  cursor:grab
 }
 
 
@@ -427,7 +431,15 @@ nav {
 #contactid {
   width: 187px;
   color: white;
+  cursor:grab
 }
+
+#work{
+  color: white;
+  cursor:grab
+  
+}
+
 
 .header {
   width: 100vw;
@@ -752,6 +764,7 @@ h6 {
   
 #services {
   width: 134px;
+  color: white;
 }
 
 #work {
@@ -761,6 +774,7 @@ h6 {
 
 #contactid {
   width: 125px;
+  color: white;
 }
    
 .headerWrapper h6 {

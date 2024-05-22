@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "../../style/GetinTouch.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,9 +10,11 @@ import {
 import gsap from "gsap";
 import emailjs from "emailjs-com";
 import CV from "../../assets/Docx/CV.docx";
+import Clockbox from './ClockBox';
 
 const GetInTouch = () => {
   const [Email, setEmail] = useState("");
+
   useEffect(() => {
     const hero = document.querySelector("[data-hero]");
     const handleMouseMove = (e) => {
@@ -101,9 +103,9 @@ const GetInTouch = () => {
     emailjs
       .send(
         "service_d5t73ko",
-        "template_4ikfptm", // Replace with your EmailJS template ID
+        "template_4ikfptm",
         templateParams,
-        "vd2KgeAFyaaYEtnq_" // Replace with your EmailJS user ID
+        "vd2KgeAFyaaYEtnq_"
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
@@ -118,7 +120,10 @@ const GetInTouch = () => {
 
   return (
     <>
+    
+
       <div className="wrapper">
+      <Clockbox />
         <div className="hero">
           <p className="hero__heading" onClick={handleDownloadCV}>
             Download CV
@@ -170,7 +175,6 @@ const GetInTouch = () => {
         </a>
       </div>
 
-      {/* Footer Area */}
       <footer className="footer">
         <div className="SendCV">
           <form onSubmit={sendEmail}>

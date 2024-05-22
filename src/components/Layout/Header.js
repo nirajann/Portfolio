@@ -95,8 +95,9 @@ const Header = () => {
                     Services
                   </a>
                   <a onClick={() => handleNavClick("Work")} id="work">
-                    Our work
+                  Our work
                   </a>
+                 
                   <a onClick={() => handleNavClick("Work")} id="contactid">
                     Contact
                   </a>
