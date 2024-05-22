@@ -135,7 +135,7 @@ const GetInTouch = () => {
               href="#"
               className="header__btn"
               target="_blank"
-              title="Check On Github"
+              title="Download My CV"
               onClick={handleDownloadCV}
             >
               Download CV
