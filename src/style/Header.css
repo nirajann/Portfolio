@@ -449,6 +449,7 @@ nav {
 }
 
 .headerWrapper {
+  color: #fff;
   text-align: center;
   position: relative;
   padding: 56px 71px 128px 108px;
@@ -468,6 +469,7 @@ nav {
 }
 
 .headerWrapper h1 {
+  color: #fff;
   animation: 1.5s fadeInTitle ease;
 }
 
@@ -627,7 +629,7 @@ h6 {
 }
   
 .headerWrapper h1 {
-  color: #272727;
+  color: #fff;
   font-size: 56px;
   font-weight: 700;
   animation: 1.5s fadeInTitle ease;
@@ -739,6 +741,7 @@ h6 {
   }
   
   .headerWrapper {
+    
     position: static;
     padding: 0;
   }
@@ -786,7 +789,7 @@ h6 {
 }
   
 .headerWrapper h1 {
-  color: #272727;
+  color: #fff;
   font-size: 48px;
   font-weight: 700;
   animation: 1.5s fadeInTitle ease;
