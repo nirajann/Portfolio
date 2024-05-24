@@ -191,6 +191,12 @@ const Home = () => {
                 <h1>
                   Web Design <br /> & Development
                 </h1>
+                <div class="tooltip-cont">
+  <img className="toolimg" src="https://icones.pro/wp-content/uploads/2021/05/icone-d-information-jaune.png" alt="info-tooltip image"></img>
+  <span class="tt-text"><p><strong><em>Social Media Links</em></strong> </p> 
+
+<p>You can find my cv and social media in here.</p></span>
+</div>
                 <a className="button-wrapper" href="/GetinTouch">
                   <span className="dot dot-1"></span>
                   <span className="dot dot-2"></span>
@@ -202,6 +208,7 @@ const Home = () => {
                   <span className="button bg-yellow-500 px-16 py-4 rounded-full uppercase">
                     GET IN TOUCH
                   </span>
+            
                 </a>
 
                 <div id="circle" className="circle bg-yellow-500"></div>
@@ -223,6 +230,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div class="tooltipcontainer">
+
+</div>
       <div id="mouse-trail" className="mouse-trail"></div>
       <div className="hero-img">
         <img src="//i.picsum.photos/id/880/1000/600.jpg" alt=""></img>

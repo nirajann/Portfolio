@@ -6,6 +6,7 @@ import {
   faYoutube,
   faLinkedin,
   faInstagram,
+  faGitSquare
 } from "@fortawesome/free-brands-svg-icons";
 import gsap from "gsap";
 import emailjs from "emailjs-com";
@@ -165,6 +166,13 @@ const GetInTouch = () => {
           target="_blank"
         >
           <FontAwesomeIcon className="i" icon={faLinkedin} />
+        </a>
+        <a
+          className="unique-btn unique-git"
+          href="https://github.com/nirajann"
+          target="_blank"
+        >
+          <FontAwesomeIcon className="i" icon={faGitSquare} />
         </a>
         <a
           className="unique-btn unique-ig"
