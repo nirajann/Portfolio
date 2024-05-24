@@ -276,3 +276,96 @@
   text-align: center;
 }
 
+/* //note */
+
+.h1text{
+  color: #000;
+}
+
+.note::after {
+  display: flex;
+	content: '';
+	width: 20%;
+	height: 2px;
+	border-radius: 999px;
+	background-color: #AFAFAF;
+	background: linear-gradient(135deg, rgba(43,171,217,1) 0%, rgba(0,130,200,1) 100%);
+	position: absolute;
+	top: -1.8em;
+	left: 0;
+}
+.note {
+	font-size: 0.8em;
+	color: #131313;
+	position: relative;
+	margin-top: 4em;
+}
+
+/* Scroller styling */
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 500em;
+}
+
+
+
+/* .scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;
+  font-weight: bold;
+  
+} */
+
+
+.scroller > span{position: absolute;
+  display: flex;
+  animation: slide 5s infinite;
+  font-weight: bold;
+  padding-left: 600px;
+  justify-content: center;
+  align-items: center
+
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+   
+/* Scroller styling */
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 20em;
+}
+
+
+
+
+.scroller > span{position: absolute;
+  display: flex;
+  animation: slide 5s infinite;
+  font-weight: bold;
+  padding-left: 150px;
+
+}
+    }
+    
+

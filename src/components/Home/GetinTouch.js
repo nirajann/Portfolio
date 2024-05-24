@@ -123,7 +123,7 @@ const GetInTouch = () => {
     
 
       <div className="wrapper">
-      <Clockbox />
+      {/* <Clockbox /> */}
         <div className="hero">
           <p className="hero__heading" onClick={handleDownloadCV}>
             Download CV
@@ -177,6 +177,21 @@ const GetInTouch = () => {
 
       <footer className="footer">
         <div className="SendCV">
+          
+    <h1 className="h1text">Send Mail To learn more about
+      
+      <div class="scroller">
+        <span>
+          WebDesign<br/>
+          MobileDesign<br/>
+          Editing<br/>
+          Hosting
+        </span>
+      </div>
+      </h1>
+      
+  
+ 
           <form onSubmit={sendEmail}>
             <input
               id="input-email"

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../style/About.css'; // Assuming you have a CSS file for About section
 import logo from "../../assets/Image/logo.png"
+import SVG from "../../assets/SVG/mail.svg"
 
 const About = () => {
   return (
@@ -29,7 +30,8 @@ const About = () => {
       </div>
 
       <div class="mail-button mail-button2">
-        <a href="mailto:prajapatismit2906@gmail.com"><img src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/mail.svg" alt="mail"></img></a>
+        
+        <a href="mailto:Nirajangautamworks@gmail.com"><img src={SVG} alt="mail"></img></a>
       </div>
 
     </div>

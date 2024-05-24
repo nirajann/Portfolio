@@ -640,9 +640,18 @@
     .page-right-2 {
       padding-left: 9%;
     }
+
+    .project-image {
+      max-width: 100%;
+      height: 200px;
+    }
   }
   
   @media (max-width: 767px) {
+    .project-image {
+      max-width: 100%;
+      height: 200px;;
+    }
     .book-wrap {
       width: 80vw;
       margin-bottom: 2vw;
@@ -714,6 +723,10 @@
   }
   
   @media (max-width: 479px) {
+    .project-image {
+      max-width: 100%;
+      height: 150px;
+    }
     .scene {
       height: 69vw;
     }

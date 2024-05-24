@@ -15,13 +15,27 @@ body {
   
 }
 
-
 #nav{
   background-color: #000;
 }
 
 .dark-mode #nav {
   background-color: #fff; /* Dark mode background color */
+}
+
+.dark-mode .navWrapper {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.dark-mode .headerWrapper h6{
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 
@@ -34,13 +48,7 @@ body {
 
 }
 
-.dark-mode .navWrapper {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
+
 
 .navWrapper a {
   color: black; /* Set the text color to black */
@@ -71,7 +79,7 @@ body {
 }
 
 .headerWrapper h6 {
-  color: #D6D6D6;
+  color: #f9f8f8;
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
@@ -157,6 +165,7 @@ nav {
   font-family: "Pacifico";
   font-weight: normal;
   text-decoration: none;
+  z-index: 2;
 }
 
 .dark-mode #logo {
