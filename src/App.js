@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import Home from "./components/Home/Home";
@@ -17,7 +17,7 @@ import Notfound from  "./components/Home/Notfound"
 
 function App() {
   return (
-    <Router>
+<>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/Thisisnottheoneyouwannalookat" element={<Secret />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
-    </Router>
+      </>
   );
 }
 
