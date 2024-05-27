@@ -197,7 +197,7 @@ const Home = () => {
 
 <p>You can find my cv and social media in here.</p></span>
 </div>
-                <a className="button-wrapper" href="/Portfolio/GetinTouch">
+                <a className="button-wrapper" href="/GetinTouch">
                   <span className="dot dot-1"></span>
                   <span className="dot dot-2"></span>
                   <span className="dot dot-3"></span>

@@ -20,13 +20,13 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/Portfolio" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Portfolio/GetinTouch" element={<GetinTouch />} />
-        <Route path="/Portfolio/Thisisnottheoneyouwannalookat" element={<Secret />} />
-        <Route path="/Portfolio/Notfound" element={<Notfound />} />
+        <Route path="/GetinTouch" element={<GetinTouch />} />
+        <Route path="/Thisisnottheoneyouwannalookat" element={<Secret />} />
+        <Route path="/Notfound" element={<Notfound />} />
       </Routes>
     </Router>
   );

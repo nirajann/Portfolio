@@ -80,7 +80,7 @@ const Header = () => {
       <div className={isDarkMode ? "dark-mode" : ""}>
         <nav id="nav">
           <div className="navWrapper">
-            <a href="/Portfolio" id="logo">
+            <a href="/" id="logo">
               NirajanGautam
             </a>
             <div className="right">
