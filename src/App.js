@@ -17,7 +17,7 @@ import Notfound from  "./components/Home/Notfound"
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/Thisisnottheoneyouwannalookat" element={<Secret />} />
         <Route path="/Notfound" element={<Notfound />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
