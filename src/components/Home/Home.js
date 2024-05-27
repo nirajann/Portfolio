@@ -197,7 +197,7 @@ const Home = () => {
 
 <p>You can find my cv and social media in here.</p></span>
 </div>
-                <a className="button-wrapper" href="/GetinTouch">
+                <a className="button-wrapper" href="/#/GetinTouch">
                   <span className="dot dot-1"></span>
                   <span className="dot dot-2"></span>
                   <span className="dot dot-3"></span>
@@ -238,7 +238,7 @@ const Home = () => {
         <img src="//i.picsum.photos/id/880/1000/600.jpg" alt=""></img>
       </div>
       <section>
-        <a href="/Thisisnottheoneyouwannalookat" className="secret">
+        <a href="/#/Thisisnottheoneyouwannalookat" className="secret">
           ...
         </a>
         <h1 className="typing-text" ref={typingTextRef}></h1>
