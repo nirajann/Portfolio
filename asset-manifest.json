@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.32b22a22.css",
-    "main.js": "/static/js/main.70f240a0.js",
+    "main.js": "/static/js/main.34712746.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/logo.png": "/static/media/logo.ecd092f61e9e2b7c6def.png",
     "static/media/Passportpal.jpg": "/static/media/Passportpal.9b7cc828f2681577f456.jpg",
@@ -9,11 +9,11 @@
     "index.html": "/index.html",
     "static/media/mail.svg": "/static/media/mail.b655042954a6359e1572c2c8e25c7e8f.svg",
     "main.32b22a22.css.map": "/static/css/main.32b22a22.css.map",
-    "main.70f240a0.js.map": "/static/js/main.70f240a0.js.map",
+    "main.34712746.js.map": "/static/js/main.34712746.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32b22a22.css",
-    "static/js/main.70f240a0.js"
+    "static/js/main.34712746.js"
   ]
 }
