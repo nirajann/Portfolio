@@ -124,7 +124,6 @@ const GetInTouch = () => {
     
 
       <div className="wrapper">
-      {/* <Clockbox /> */}
         <div className="hero">
           <p className="hero__heading" onClick={handleDownloadCV}>
             Download CV
