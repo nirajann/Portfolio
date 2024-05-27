@@ -2,6 +2,8 @@ import React from 'react';
 import '../../style/About.css'; // Assuming you have a CSS file for About section
 import logo from "../../assets/Image/logo.png"
 import SVG from "../../assets/SVG/mail.svg"
+import profile from "../../assets/Image/profile.jpg"
+import BWprofile from "../../assets/Image/BWprofile.jpg"
 
 const About = () => {
   return (
@@ -16,8 +18,8 @@ const About = () => {
       <div class="about-me-flex-container">
         <div class="about-me-image">
           <div class="back-div"></div>
-          <div class="black-image"><img src="https://scontent.fktm10-1.fna.fbcdn.net/v/t39.30808-6/313429930_3434326163468098_302690643224032631_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF_XL_1EniAtLO_qfVdNyv4eEtG2GOQZ7h4S0bYY5BnuKGqPvlAGlJvR90u81PCa2Q5C-9tY8PbCjDFpdeVqqtA&_nc_ohc=THtBH5jrq98Q7kNvgGlfYB3&_nc_ht=scontent.fktm10-1.fna&oh=00_AYCq9NNViJs4Mi0YUdNwCF7E5rxysIMyaGJmJW_1EJ0lgA&oe=6653696C" alt="black"></img></div>
-          <div class="main-image"><img src="https://scontent.fktm10-1.fna.fbcdn.net/v/t39.30808-6/313429930_3434326163468098_302690643224032631_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF_XL_1EniAtLO_qfVdNyv4eEtG2GOQZ7h4S0bYY5BnuKGqPvlAGlJvR90u81PCa2Q5C-9tY8PbCjDFpdeVqqtA&_nc_ohc=THtBH5jrq98Q7kNvgGlfYB3&_nc_ht=scontent.fktm10-1.fna&oh=00_AYCq9NNViJs4Mi0YUdNwCF7E5rxysIMyaGJmJW_1EJ0lgA&oe=6653696C" alt="smit"></img></div>
+          <div class="black-image"><img src={BWprofile} alt="black"></img></div>
+          <div class="main-image"><img src={profile} alt="smit"></img></div>
         </div>
         <div class="about-me-content">
 
