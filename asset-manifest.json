@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.32b22a22.css",
-    "main.js": "/static/js/main.cf68f9c3.js",
-    "static/js/453.ff935552.chunk.js": "/static/js/453.ff935552.chunk.js",
+    "main.js": "/static/js/main.ec45aa29.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/logo.png": "/static/media/logo.ecd092f61e9e2b7c6def.png",
     "static/media/Passportpal.jpg": "/static/media/Passportpal.9b7cc828f2681577f456.jpg",
     "static/media/CV.docx": "/static/media/CV.9b551f77a4e0260c7f56.docx",
     "index.html": "/index.html",
     "static/media/mail.svg": "/static/media/mail.b655042954a6359e1572c2c8e25c7e8f.svg",
     "main.32b22a22.css.map": "/static/css/main.32b22a22.css.map",
-    "main.cf68f9c3.js.map": "/static/js/main.cf68f9c3.js.map",
-    "453.ff935552.chunk.js.map": "/static/js/453.ff935552.chunk.js.map"
+    "main.ec45aa29.js.map": "/static/js/main.ec45aa29.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32b22a22.css",
-    "static/js/main.cf68f9c3.js"
+    "static/js/main.ec45aa29.js"
   ]
 }
