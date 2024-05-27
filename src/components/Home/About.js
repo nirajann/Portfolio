@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div class="about-me-content">
 
-          <div class="logo"><img src={logo} alt="smit"></img></div>
+          <div class="logo"><img className='aboutlogo' src={logo} alt="smit"></img></div>
 
           <div class="text">
           Crafting beauty from simplicity, Nirajan brings innovation to life. With a keen eye for detail, he turns concepts into captivating creations, making the ordinary exceptional.

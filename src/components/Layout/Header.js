@@ -92,7 +92,7 @@ const Header = () => {
               <div className={`overlay ${isOverlayOpen ? "open" : ""}`}>
                 <div className="overlayContent">
                   <a onClick={() => handleNavClick("Work")} id="services">
-                    Services
+                    Service
                   </a>
                   <a onClick={() => handleNavClick("Work")} id="work">
                   Our work
@@ -101,7 +101,6 @@ const Header = () => {
                   <a onClick={() => handleNavClick("Work")} id="contactid">
                     Contact
                   </a>
-                  <p>Copyright 2018</p>
                 </div>
               </div>
             </div>

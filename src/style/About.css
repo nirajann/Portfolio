@@ -69,6 +69,9 @@ img {
   justify-content: space-between;
 }
 @media (max-width: 960px) {
+  .aboutlogo{
+    width: 100px;
+  }
   .about-me-flex-container {
     flex-direction: column;
     justify-content: center;
@@ -78,6 +81,9 @@ img {
   }
 }
 @media (max-width: 500px) {
+  .aboutlogo{
+    width: 50px;
+  }
   .about-me-flex-container {
     margin-top: -10px;
   }

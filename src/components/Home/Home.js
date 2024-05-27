@@ -158,7 +158,7 @@ const Home = () => {
     <>
       <div id="Awesome" className="anim750">
         <div className="reveal circle_wrapper">
-          <div className="circle">Hello!</div>
+       
         </div>
 
         <div className="sticky anim750">
