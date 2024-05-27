@@ -236,7 +236,7 @@ nav {
 }
 
 #nav-icon.open span {
-  background: white; /* Change color to white when nav icon is open */
+  background: white; 
 }
 
 #nav-icon span:nth-child(1) {
@@ -992,7 +992,7 @@ toogleform {
 	outline: transparent;
 }
 
-/* get in touch */
+
 
 .circle {
   width: 8px;
@@ -1055,19 +1055,19 @@ toogleform {
   opacity: 0;
 }
 
-.button-wrapper:hover {
-  .button::before, .button::after {
+.button-wrapper:hover .button::before,
+.button-wrapper:hover .button::after {
     opacity: 1;
-  }
-  
-  .dot {
-    transform: translate(0, 0) rotate(var(--rotatation));
-  }
-  
-  .dot::after {
-    animation-play-state: running;
-  }
 }
+
+.button-wrapper:hover .dot {
+    transform: translate(0, 0) rotate(var(--rotation));
+}
+
+.button-wrapper:hover .dot::after {
+    animation-play-state: running;
+}
+
 
 .dot {
   display: block;

@@ -1,21 +1,20 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
-/* Dark mode styles */
+
 .dark-mode .background {
-  background-color: #fff; /* Dark mode background color */
+  background-color: #fff;
 }
 
 .dark-mode .navWrapper a {
-  color: #000; /* Dark mode link color */
+  color: #000; 
 }
 
 .dark-mode .navWrapper a:hover {
-  color: #fff; /* Dark mode link hover color */
+  color: #fff; 
 }
 
 .dark-mode .headerWrapper h1 {
-  color: #000; /* Dark mode link hover color */
+  color: #000; 
 
   
 }
@@ -24,7 +23,7 @@
   background-color: black;
 }
 
-/* Added styles for centering */
+
 .home .container-fluid {
   height: 100%;
 }
@@ -40,9 +39,9 @@
   background-color: #fff;
   color: #000;text-decoration: none;
 
-  padding: 10px 20px; /* Increase padding to make buttons bigger */
-  border: 2px solid #000; /* Add border to create square buttons */
-  border-radius: 0; /* Remove border radius to make buttons square */
+  padding: 10px 20px; 
+  border: 2px solid #000; 
+  border-radius: 0; 
   transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out, transform 0.3s; /* Increase transition duration and use ease-in-out for smoother transition */
 }
 
@@ -50,11 +49,11 @@
 
 
 
-/* Hover effect */
+
 .btn-white:hover {
   background-color: #000;
   color: #fff;
-  transform: translateX(5px); /* Slide the button to the right on hover */
+  transform: translateX(5px); 
 }
 
 .mouse-trail {
@@ -64,7 +63,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 9999; /* Ensure the trail is above other elements */
+  z-index: 9999; 
 }
 
 .star {
@@ -106,11 +105,11 @@
 
 
 
-/* Hover effect */
+
 .btn-white:hover {
   background-color: #000;
   color: #fff;
-  transform: translateX(5px); /* Slide the button to the right on hover */
+  transform: translateX(5px); 
 }
 
 .mouse-trail {
@@ -120,7 +119,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 9999; /* Ensure the trail is above other elements */
+  z-index: 9999; 
 }
 
 .star {
@@ -154,33 +153,32 @@
   color: black;
   }
 
-/* 
-  ////tooltip// */
+
   .toolimg{
     width: 20px;
   }
   
-  /* page container only added for codepen */
+ 
   .tooltipcontainer {
     width: 100%;
     padding-top: 200px;
     text-align: center;
   }
   
-  /* inner container */
+ 
   .tooltip-cont {
     position: relative;
     display: inline-block;
     padding-right: 10px;
   }
   
-  /* tt-text = tool tip text */
+
   .tooltip-cont .tt-text {
       font-family: verdana;
       font-size: 13px;
       visibility: hidden;
       min-width: 100%;
-  /*     Cannot use fixed width for this. Refactor to provide logic pertaining to viewport size. */
+ 
       width: 300px;
       background-color: #555;
       color: #fff;
@@ -188,21 +186,20 @@
       padding: 10px 20px;
       border-radius: 2px;
   
-      /* text positioning */
+   
       position: absolute;
       z-index: 1;
     
-      /* For width @ 450px */
+    
       bottom: 125%;
       left: -565%;
       margin-left: -60px;
   
-      /* fade em in */
+
       opacity: 0;
       transition: opacity 1s;
   }
-  
-  /* tt-triangle */
+
   .tooltip-cont .tt-text::after {
       content: "";
       position: absolute;
@@ -214,7 +211,7 @@
       border-color: #555 transparent transparent transparent;
   }
   
-  /* Show tooltip when hovering or active (touch devices) */
+
   .tooltip-cont:hover .tt-text,
   .tooltip-cont:active .tt-text{
       visibility: visible;

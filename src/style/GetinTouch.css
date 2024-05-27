@@ -1,4 +1,4 @@
-/* /// clock*/
+
 .Bdaycontainer{
   padding-top: 10%;
   color: #fff;
@@ -76,7 +76,7 @@
   background-color: #000;
 }
 
-/* // sunny day*/
+
 .wrapper {
   position: relative;
 }
@@ -112,7 +112,6 @@
   margin-right: auto;
 }
 
-/* ///////////////////////////// */
 .unique-mid {
   position: absolute;
   top: 90%;
@@ -235,7 +234,7 @@
     transform: rotate(0deg) scale(1.5);
 }
 }
-/* ///send CV // */
+
 
 .SendCV {
   background-color: #fff;
@@ -260,13 +259,14 @@
   padding: 0 15px;
   height: 33px;
   border: 1px solid black;
-  background: transparent;
+  background-color: transparent;
   border-radius: 18px;
   outline: none;
   margin-right: 1rem;
-  &::placeholder {
-    color: rgb(17, 16, 16);
-  }
+}
+
+.mail-input::placeholder {
+  color: rgb(17, 16, 16);
 }
 
 .btn-mail-receive {
@@ -281,7 +281,7 @@
   display: inline-block;
 }
 
-/* Footer Section Styling */
+
 .footer {
   background: #222;
   color: #fff;
@@ -289,7 +289,7 @@
   text-align: center;
 }
 
-/* //note */
+
 
 .h1text{
   color: #000;
@@ -314,7 +314,7 @@
 	margin-top: 4em;
 }
 
-/* Scroller styling */
+
 .scroller {
   height: 1.2em;
   line-height: 1.2em;
@@ -323,15 +323,6 @@
   width: 500em;
 }
 
-
-
-/* .scroller > span {
-  position: absolute;
-  top: 0;
-  animation: slide 5s infinite;
-  font-weight: bold;
-  
-} */
 
 
 .scroller > span{position: absolute;
@@ -360,7 +351,6 @@
 
 @media only screen and (max-width: 900px) {
    
-/* Scroller styling */
 .scroller {
   height: 1.2em;
   line-height: 1.2em;
