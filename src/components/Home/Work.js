@@ -57,7 +57,7 @@ const Work = () => {
   };
 
   return (
-    <section className="services">
+    <section className="Work">
       <div className="container">
         <div className="section-header">
           <span className="tag">WORK</span>

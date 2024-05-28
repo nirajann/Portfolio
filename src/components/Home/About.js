@@ -9,7 +9,7 @@ const About = () => {
   return (
 <>
 <section class="about-me" id="about-me">
-  <div class="container">
+  <div class="AboutClasscontainer">
     <div class="about-me-container">
       <div class="about-me-title">
         About <br></br> Nirajan Gautam

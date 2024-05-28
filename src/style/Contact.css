@@ -148,6 +148,23 @@ svg {
 
 
 @media only screen and (max-width: 900px) {
+  .contact-container {
+    display: flex;
+    padding: 20px;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  .contact-section {
+    background-color: #0e0e10;
+    color: white;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+}
    
 .contact-left h1{
     border-radius: 5%;

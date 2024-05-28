@@ -19,17 +19,20 @@ function App() {
   
   return (
 <>
+<div>
       <Header />
       <Routes>
+        <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/getintouch" element={<GetinTouch />} />
         <Route path="/Thisisnottheoneyouwannalookat" element={<Secret />} />
-        <Route path="/*" element={<Notfound />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
-  </>
+      </div>
+      </>
   );
 }
 

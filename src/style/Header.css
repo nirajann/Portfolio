@@ -429,7 +429,7 @@ nav {
   }
 } 
 
-#services {
+#About {
   width: 201px;
   color: white;
   cursor:grab
@@ -443,7 +443,7 @@ nav {
   cursor:grab
 }
 
-#work{
+#Work{
   color: white;
   cursor:grab
   
@@ -596,9 +596,18 @@ nav {
 
 @media (max-width: 850px) and (min-width: 440px){
 
+
 .headerWrapper {
    position: static;
-  padding: 0;
+}
+
+.headerWrapper h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  font-size: 56px;
+  font-weight: 700;
+  animation: 1.5s fadeInTitle ease;
 }
   
 .overlay a {
@@ -618,31 +627,27 @@ nav {
     margin-left: 40px;
 }
   
-#services {
-  width: 134px;
+#About {
+  width: 100%;
   color: white;
 }
 
-#work {
-  width: 150px;
+#Work {
+  width: 100%;
   color: white;
 }
 
 #contactid {
-  width: 125px;
+  width: 100%;
   color: white;
 }
+
    
 h6 {
   font-size: 22px;
 }
   
-.headerWrapper h1 {
-  color: #fff;
-  font-size: 56px;
-  font-weight: 700;
-  animation: 1.5s fadeInTitle ease;
-}
+
   
 .circle {
   border-radius: 50%;  
@@ -754,6 +759,8 @@ h6 {
     position: static;
     padding: 0;
   }
+
+  
   
 .overlay a {
   color: white;
@@ -774,13 +781,13 @@ h6 {
   margin-top: 40px;
 }
   
-#services {
+#About {
   width: 134px;
   color: white;
 }
 
-#work {
-  width: 150px;
+#Work {
+  width: 100%;
   color: white;
 }
 
@@ -791,7 +798,8 @@ h6 {
    
 .headerWrapper h6 {
   color: #D6D6D6;
-  font-size: 22px;
+  font-size: 25px;
+  padding-bottom: 20px;
   font-weight: 600;
   text-transform: uppercase;
   animation: 1s fadeIn ease;

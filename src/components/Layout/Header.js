@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Kinet from "kinet";
 import "../../style/Header.css";
 
 const Header = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
 
   const toggleOverlay = () => {
     setIsOverlayOpen(!isOverlayOpen);
@@ -16,19 +17,14 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const location = useLocation();
-
   const handleNavClick = (section) => {
+    setIsOverlayOpen(false);
     if (location.pathname !== "/") {
       window.location.href = `/#${section}`;
     } else {
-      if (section === "work") {
-        scroll.scrollTo(document.getElementById("contact").offsetTop, {
-          duration: 500,
-          smooth: true,
-        });
-      } else {
-        scroll.scrollTo(document.getElementById(section).offsetTop, {
+      const element = document.getElementById(section);
+      if (element) {
+        scroll.scrollTo(element.offsetTop, {
           duration: 500,
           smooth: true,
         });
@@ -37,80 +33,74 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // create instance of kinet with custom settings
-    var kinet = new Kinet({
+    const kinet = new Kinet({
       acceleration: 0.02,
       friction: 0.25,
       names: ["x", "y"],
     });
 
-    // select circle element
-    var circle = document.getElementById("circle");
+    const circle = document.getElementById("circle");
 
-    // check if circle element exists
     if (circle) {
-      // set handler on kinet tick event
       kinet.on("tick", function (instances) {
-        circle.style.transform = `translate3d(${instances.x.current}px, ${
-          instances.y.current
-        }px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${
-          instances.y.velocity / 2
-        }deg)`;
+        circle.style.transform = `translate3d(${instances.x.current}px, ${instances.y.current}px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${instances.y.velocity / 2}deg)`;
       });
     }
 
-    // call kinet animate method on mousemove
-    document.addEventListener("mousemove", function (event) {
+    const handleMouseMove = (event) => {
       kinet.animate("x", event.clientX - window.innerWidth / 2);
       kinet.animate("y", event.clientY - window.innerHeight / 2);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => handleNavClick(link.id));
     });
 
-    // log
-    kinet.on("start", function () {
-      console.log("start");
-    });
-
-    kinet.on("end", function () {
-      console.log("end");
-    });
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', () => handleNavClick(link.id));
+      });
+    };
   }, []);
 
   return (
-    <div className="BG">
-      <div className={isDarkMode ? "dark-mode" : ""}>
-        <nav id="nav">
-          <div className="navWrapper">
-            <a href="/" id="logo">
-              NirajanGautam
-            </a>
-            <div className="right">
-              <div id="nav-icon" onClick={toggleOverlay}>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div className={`overlay ${isOverlayOpen ? "open" : ""}`}>
-                <div className="overlayContent">
-                  <a onClick={() => handleNavClick("Work")} id="services">
-                    Service
-                  </a>
-                  <a onClick={() => handleNavClick("Work")} id="work">
-                  Our work
-                  </a>
-                 
-                  <a onClick={() => handleNavClick("Work")} id="contactid">
-                    Contact
-                  </a>
-                </div>
+    <div className={`BG ${isDarkMode ? "dark-mode" : ""}`}>
+      <nav id="nav">
+        <div className="navWrapper">
+          <a href="/" id="logo">
+            NirajanGautam
+          </a>
+          <div className="right">
+            <div id="nav-icon" className={isOverlayOpen ? "open" : ""} onClick={toggleOverlay}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div className={`overlay ${isOverlayOpen ? "open" : ""}`}>
+              <div className="overlayContent">
+                <a onClick={() => handleNavClick("about")} id="About">
+                About
+                </a>
+                <a onClick={() => handleNavClick("Work")} id="Work">
+                  My work
+                </a>
+                <a onClick={() => handleNavClick("contact")} id="contactid">
+                  Contact
+                </a>
               </div>
             </div>
           </div>
-          {/* <form id="toogleform">
-            <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
-            <div className="curtain"></div>
-          </form> */}
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
   );
 };

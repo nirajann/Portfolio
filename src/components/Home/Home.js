@@ -197,7 +197,7 @@ const Home = () => {
 
 <p>You can find my cv and social media in here.</p></span>
 </div>
-                <a className="button-wrapper" href="/getintouch">
+                <a className="button-wrapper" href="/#/getintouch">
                   <span className="dot dot-1"></span>
                   <span className="dot dot-2"></span>
                   <span className="dot dot-3"></span>
@@ -234,15 +234,15 @@ const Home = () => {
 
 </div>
       <div id="mouse-trail" className="mouse-trail"></div>
-      <div className="hero-img">
-        <img src="//i.picsum.photos/id/880/1000/600.jpg" alt=""></img>
-      </div>
-      <section>
-        <a href="/Thisisnottheoneyouwannalookat" className="secret">
+      {/* <div className="hero-img">
+        <img src="//i.picsum.photos/id/880/1000/600.jpg" alt="info"></img>
+      </div> */}
+
+        <a href="/#/Thisisnottheoneyouwannalookat" className="secret">
           ...
         </a>
         <h1 className="typing-text" ref={typingTextRef}></h1>
-      </section>
+
       <section id="about">
         <About />
         <section id="Work">
