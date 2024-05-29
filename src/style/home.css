@@ -258,9 +258,9 @@
     z-index: 2;
  }
 
- .right{
+ /* .right{
   padding-right: 20px;
- }
+ } */
  .headerWrapper h1{
 
   font-size: 50px;

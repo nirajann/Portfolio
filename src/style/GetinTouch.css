@@ -349,7 +349,26 @@
   }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 900px) {
+   
+  .scroller {
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    width: 20em;
+  }
+  
+  .scroller > span{position: absolute;
+    display: flex;
+    animation: slide 5s infinite;
+    font-weight: bold;
+    padding-left: 150px;
+  
+  }
+      }
+
+@media only screen and (max-width: 900px) {
    
 .scroller {
   height: 1.2em;

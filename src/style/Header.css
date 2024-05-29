@@ -154,7 +154,7 @@ nav {
 }
 
 .navWrapper {
-  width: 85%;
+  width: 90%;
   margin: auto;
   padding-top: 24px;
 }
@@ -303,6 +303,8 @@ nav {
   visibility: hidden;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 .overlay.open {
