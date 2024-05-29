@@ -1025,10 +1025,11 @@ toogleform {
 .button {
 
   position: relative;
-  text-decoration: none;
   text-align: center;
   appearance: none;
+  padding-top: 15px;
   width: 150px;
+  height: 50px;
   background-color: #eab308;
   display: inline-block;
   border-radius: 999px;

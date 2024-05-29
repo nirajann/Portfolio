@@ -69,63 +69,37 @@
   color: #888;
 }
 
-.btn {
-  width: 140px;
-  height: 50px;
-  border-radius: 10%;
-  background-color: #dbb418;
-  z-index: 100;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  filter: url("#goo");
-}
 
-.btn p {
-  color: #913b72;
-  font-size: 22px;
-  line-height: 1;
-  user-select: none; /* covers -webkit-user-select and -ms-user-select */
+#sendBtn{
+  border:none;
+  outline:none;
+  cursor:pointer;
+  display:block;
+  position:relative;
+  background-color:#fcad26;
+  font-size:16px;
+  font-weight: 300;
+  color:white;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  padding:25px 80px;
+  margin:0 auto;
+  border-radius:20px;
+  box-shadow:0 6px #efa424;  
 }
-
-.btn:hover {
-  box-shadow: 0px 1px 9px #80ece9;
+#sendBtn:hover{
+  top: 2px;
+  box-shadow:0 4px #efa424;
 }
-
-.btn:active {
-  transform: scale(0.9);
-  box-shadow: -2px 2px 23px #80ece9;
-}
-
-particle {
-  position: absolute;
-  background: #80ece9;
-  left: 0;
-  border-radius: 100%;
-  pointer-events: none;
-  top: 0;
-  transform-style: preserve-3d;
-  opacity: 0;
-  box-shadow: 5px 5px 44px rgba(100, 155, 200, 1);
-  z-index: 5;
-  filter: url("#goo");
-}
-
-svg {
-  position: absolute;
-  top: -100%;
-  left: -100%;
+#btn:active{
+  top: 6px;
+  box-shadow:none;
 }
 
 
 
-@keyframes toot-animation {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
+
+
 
 .email-link {
   display: inline-flex;
@@ -145,6 +119,8 @@ svg {
   width: 1.25rem; 
   height: 1.25rem; 
 }
+
+
 
 
 @media only screen and (max-width: 900px) {

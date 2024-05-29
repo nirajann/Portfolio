@@ -7,6 +7,10 @@ const Contact = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Message, setMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
   const navigate = useNavigate();
   const buttonRef = useRef(null);
 
@@ -57,11 +61,38 @@ const Contact = () => {
   const HandleContact = (e) => {
     e.preventDefault();
 
+    let valid = true;
+    if (!Name) {
+      setNameError("Name must be filled");
+      valid = false;
+    } else {
+      setNameError("");
+    }
+    if (!Email) {
+      setEmailError("Email must be filled");
+      valid = false;
+    } else {
+      setEmailError("");
+    }
+    if (!Message) {
+      setMessageError("Message must be filled");
+      valid = false;
+    } else {
+      setMessageError("");
+    }
+
+    if (!valid) {
+      setAlertMessage("Please fill in all required fields.");
+      return;
+    }
+
     const templateParams = {
       from_name: Name,
       from_email: Email,
       message: Message,
     };
+
+    console.log("Sending email with parameters:", templateParams);
 
     emailjs
       .send(
@@ -72,13 +103,15 @@ const Contact = () => {
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
-        alert("Email sent successfully!");
+        setAlertMessage("Email sent successfully!");
         navigate("/");
       })
       .catch((err) => {
         console.error("Failed to send email:", err);
+        setAlertMessage("Failed to send email. Please try again later.");
       });
   };
+
 
   const handleButtonClick = () => {
     // Play sound
@@ -150,9 +183,14 @@ const Contact = () => {
         <div className="contact-right">
           <form
             onSubmit={HandleContact}
-            autoComplete="off"
+       
             className="contact-form"
           >
+            {alertMessage && (
+              <div className="alert-message">
+                {alertMessage}
+              </div>
+            )}
             <input
               type="text"
               className="contact-input"
@@ -161,6 +199,7 @@ const Contact = () => {
               onChange={(e) => setName(e.target.value)}
               required
             />
+            {nameError && <p className="error-message">{nameError}</p>}
             <input
               type="email"
               className="contact-input"
@@ -169,6 +208,7 @@ const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+            {emailError && <p className="error-message">{emailError}</p>}
             <textarea
               className="contact-input"
               placeholder="Message"
@@ -177,6 +217,7 @@ const Contact = () => {
               onChange={(e) => setMessage(e.target.value)}
               required
             />
+            {messageError && <p className="error-message">{messageError}</p>}
             {/* Replace the existing button with the provided HTML */}
             <a
               className="email-link inline-flex items-center text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
@@ -196,13 +237,11 @@ const Contact = () => {
               </svg>
               nirajangautamworks@gmail.com
             </a>
-            <div
-              className="btn flex justify-center items-center"
-              onClick={handleButtonClick}
-              ref={buttonRef}
-            >
-              <p>hit me up</p>
-            </div>
+      
+<button  onClick={handleButtonClick}
+              ref={buttonRef} id="sendBtn">Hit Me Up</button>
+          
+      
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
               <defs>
                 <filter id="goo">
